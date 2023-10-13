@@ -2,7 +2,7 @@ mport file_operation
 import Note
 import ui
 
-number = 6  # сколько знаков МИНИМУМ может быть в тексте заметки
+number = 6  # МИНИМУМ символов в заметки
 
 
 def add():
@@ -33,11 +33,11 @@ def show(text):
             if date in Note.Note.get_date(notes):
                 print(Note.Note.map_note(notes))
     if logic == True:
-        print('Нет ни одной заметки...')
+        print('Заметок НЕТ!')
 
 
 def id_edit_del_show(text):
-    id = input('Введите id необходимой заметки: ')
+    id = input('Введите id заметки: ')
     array = file_operation.read_file()
     logic = True
     for notes in array:
